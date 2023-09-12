@@ -10,12 +10,3 @@ public class TestMessageConsumer : IConsumer<TestMessage>
         return Task.CompletedTask;
     }
 }
-
-public class OrderCreatedConsumer : IConsumer<OrderCreated>
-{
-    public Task Consume(ConsumeContext<OrderCreated> context)
-    {
-        Console.WriteLine(context.Message.OrderId);
-        return Task.CompletedTask;
-    }
-}
